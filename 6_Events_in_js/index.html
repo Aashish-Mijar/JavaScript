@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in Javascript</title>
+</head>
+<body>
+    <div id="container">
+    <h1 id="h">Hi I am heading 1!</h1>
+    <p id="para1">I am paragraph one</p>
+    <p id="para2">I am paragraph two</p>
+</div>
+</body>
+<script>
+     // attachEvent---classic
+    // jQuery
+
+         //--------------TO READ
+    // types, timestamp, defaultPrevented.....
+    // target, toElement. srcElemnt, currentTarget,....
+    // clientX, clientY, screenX, screenY....
+    // altkey, ctrlkey, shiftkey, keyCode....
+   
+
+    // document.getElementById('container').addEventListener('click', function(e){
+    //     console.log("clicked div element")
+    // }, false)
+
+    // document.getElementById('h').addEventListener('click', function(e){
+    //     console.log("clicked h1")
+    //     e.stopPropagation();
+    // }, false)
+
+    // document.getElementById('para').addEventListener('click', function(e){
+    //     console.log("clicked paragraph")
+    //     e.preventDefault();
+    // }, true)
+
+   const div=document.querySelector('#container').addEventListener('click', function(e){
+    // console.log(e.target.tagName)
+
+    if(e.target.tagName==='H1'){
+        console.log(e.target.id);
+        let removeIt=e.target.parentNode;
+        removeIt.remove();
+    }
+    
+    // removeIt.remove();
+    // removeIt.parentNode.removeChild(removeIt);
+
+   }, false)
+</script>
+</html>

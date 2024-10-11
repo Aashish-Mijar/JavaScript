@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    height:400px;
+    width:500px;
+    padding:2rem;
+    margin:200px auto;
+    border:3px solid olive;
+}
+#btn{
+ margin-top:20px;
+margin-left:100px;
+margin-bottom:20px;
+padding:0.3rem;
+}
+#btn-res{
+    padding:0.3rem;                                                                                                                                                                                                                                                               
+}
+button:hover{
+    background-color:rgb(175, 175, 27);
+}
