@@ -1,0 +1,28 @@
+.container{
+    height:300px;
+    width:900px;
+    margin:auto;
+    margin-bottom:10px;
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0.5rem;
+}
+.box{
+height:200px;
+width:200px;
+border:2px solid black;
+margin-bottom:5px;
+}
+
+#hex{
+    background-color:white;
+    color:#000;
+    padding:0.5rem;
+}
+.cont{
+    height:200px;
+    width:300px;
+    margin:auto;
+}

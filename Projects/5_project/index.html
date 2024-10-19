@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project with asycn</title>
+</head>
+<body>
+    <h1>Asycn Project</h1>
+    <button id="btn-start">Start</button>
+    <button id="btn-stop">Stop</button>
+</body>
+
+
+<script>
+//     const sayAashish=function(){
+//         console.log("Aashish");
+//     }
+
+//     const changeText=function(){ 
+//         document.querySelector('h1').innerHTML="Say something";
+//     }
+   
+//    const change= setTimeout(changeText, 2000)
+//    document.querySelector('#btn-stop').addEventListener('click',     function(){
+//     clearTimeout(change);
+//     console.log("Stopped");
+//    })
+
+
+//-----------NEW code 
+
+   const sayAashish=function(str){
+        console.log(str, Date.now());
+    }
+
+    let intervalId= null;
+   document.querySelector('#btn-start').addEventListener('click',function(){
+    if(!intervalId){
+        intervalId=setInterval(sayAashish, 2000, "Aashish");
+        console.log("Printing Started")
+    }
+    
+   });
+
+
+   document.querySelector('#btn-stop').addEventListener('click', function(){
+    if(intervalId){
+    clearInterval(intervalId);
+    intervalId=null;
+    console.log("Stopped");
+    }
+    
+   })
+    
+</script>
+</html>
